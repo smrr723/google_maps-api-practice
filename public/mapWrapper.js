@@ -8,7 +8,6 @@ var MapWrapper = function(container, coords, zoom){
    this.markers = [];
 }
 
-
 MapWrapper.prototype.addMarker = function(coords){
    var marker = new google.maps.Marker({
       position: coords,
@@ -16,7 +15,7 @@ MapWrapper.prototype.addMarker = function(coords){
    });
    this.markers.push(marker);
    var infowindow = new google.maps.InfoWindow({
-     content: marker.coords
+     content: "You placed a marker!"
    });
    marker.addListener('click', function(event) {
    // infowindow.content = "Hello world";
